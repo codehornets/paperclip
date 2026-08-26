@@ -1,0 +1,22 @@
+{
+  "fixture_id": "no-direct-ordering-cafe",
+  "restaurant_id": "restaurant-no-direct-cafe",
+  "organization_id": "sellhand-fixture-org",
+  "fictional": true,
+  "name": "Café Sans Canal",
+  "traits": {
+    "direct_ordering": false,
+    "marketplace_share": 70,
+    "mobile_score": 45,
+    "hours_consistency": 80,
+    "review_response_rate": 60,
+    "digital_presence": 55
+  },
+  "expected": {
+    "fit": "high",
+    "pain": [
+      "no_direct_ordering",
+      "marketplace_dependency"
+    ]
+  }
+}

@@ -1,0 +1,691 @@
+schema: paperclip/v1
+schemaVersion: 7
+company:
+  requireBoardApprovalForNewAgents: true
+  feedbackDataSharingEnabled: false
+agents:
+  sellhand-ceo:
+    role: ceo
+    reportsTo: null
+    icon: crown
+    capabilities: "Translate board goals into governed cross-functional projects and measurable outcomes without performing routine implementation work."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: true
+      canCreateSkills: true
+    budgetMonthlyCents: 5000
+    metadata:
+      sellhandTeam: "Executive and Governance"
+      bootstrapActive: true
+      autonomyLevel: L2
+  product-engineering-lead:
+    role: manager
+    reportsTo: sellhand-ceo
+    icon: briefcase
+    capabilities: "Own product specifications, architecture, acceptance criteria, and engineering delivery."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 4000
+    metadata:
+      sellhandTeam: "Product and Engineering"
+      bootstrapActive: true
+      autonomyLevel: L2
+  product-builder:
+    role: engineer
+    reportsTo: product-engineering-lead
+    icon: code
+    capabilities: "Implement bounded issue-scoped code changes in isolated branches or worktrees with tests and evidence."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "terminal,file"
+        persistSession: true
+        worktreeMode: true
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 3500
+    metadata:
+      sellhandTeam: "Product and Engineering"
+      bootstrapActive: true
+      autonomyLevel: L2
+  qa-reliability-reviewer:
+    role: engineer
+    reportsTo: product-engineering-lead
+    icon: code
+    capabilities: "Independently validate behavior, tenant boundaries, regression risk, tests, and release evidence."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 2500
+    metadata:
+      sellhandTeam: "Product and Engineering"
+      bootstrapActive: true
+      autonomyLevel: L2
+  growth-revenue-lead:
+    role: manager
+    reportsTo: sellhand-ceo
+    icon: briefcase
+    capabilities: "Own acquisition strategy, restaurant pipeline, messaging experiments, and measurable growth priorities."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 3500
+    metadata:
+      sellhandTeam: "Growth and Revenue"
+      bootstrapActive: true
+      autonomyLevel: L2
+  restaurant-intelligence-agent:
+    role: analyst
+    reportsTo: growth-revenue-lead
+    icon: chart
+    capabilities: "Research, enrich, qualify, and audit restaurant fixtures or approved public-source leads without contacting prospects."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 2000
+    metadata:
+      sellhandTeam: "Growth and Revenue"
+      bootstrapActive: true
+      autonomyLevel: L2
+  sales-outreach-operator:
+    role: sales
+    reportsTo: growth-revenue-lead
+    icon: circle
+    capabilities: "Prepare compliant outreach and follow-up drafts for human review."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 0
+    metadata:
+      sellhandTeam: "Growth and Revenue"
+      bootstrapActive: false
+      autonomyLevel: L1
+  content-campaign-operator:
+    role: marketing
+    reportsTo: growth-revenue-lead
+    icon: circle
+    capabilities: "Create inspectable bilingual content and campaign plans."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 0
+    metadata:
+      sellhandTeam: "Growth and Revenue"
+      bootstrapActive: false
+      autonomyLevel: L1
+  restaurant-audit-onboarding-agent:
+    role: operations
+    reportsTo: sellhand-ceo
+    icon: circle
+    capabilities: "Prepare restaurant audits and governed onboarding work packages."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 0
+    metadata:
+      sellhandTeam: "Restaurant Operations"
+      bootstrapActive: false
+      autonomyLevel: L1
+  menu-integration-operator:
+    role: operations
+    reportsTo: restaurant-audit-onboarding-agent
+    icon: circle
+    capabilities: "Normalize fixture menu data and diagnose integration health."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 0
+    metadata:
+      sellhandTeam: "Restaurant Operations"
+      bootstrapActive: false
+      autonomyLevel: L1
+  support-customer-success-agent:
+    role: support
+    reportsTo: sellhand-ceo
+    icon: circle
+    capabilities: "Triage fixture support and prepare restaurant success actions."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 0
+    metadata:
+      sellhandTeam: "Customer Success and Support"
+      bootstrapActive: false
+      autonomyLevel: L1
+  revenue-experiment-analyst:
+    role: analyst
+    reportsTo: sellhand-ceo
+    icon: chart
+    capabilities: "Produce fixture revenue reports and evidence-backed experiment recommendations."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 0
+    metadata:
+      sellhandTeam: "Data and Finance"
+      bootstrapActive: false
+      autonomyLevel: L1
+  billing-finance-operations-agent:
+    role: finance
+    reportsTo: sellhand-ceo
+    icon: circle
+    capabilities: "Prepare billing, reconciliation, AR, forecast, and unit-economics artifacts."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: false
+    budgetMonthlyCents: 0
+    metadata:
+      sellhandTeam: "Data and Finance"
+      bootstrapActive: false
+      autonomyLevel: L1
+  governance-knowledge-agent:
+    role: operations
+    reportsTo: sellhand-ceo
+    icon: circle
+    capabilities: "Maintain inspectable decisions, SOPs, training, vendor tracking, and governance evidence."
+    adapter:
+      type: hermes_local
+      config:
+        provider: openai-codex
+        model: gpt-5.6-sol
+        timeoutSec: 900
+        graceSec: 15
+        maxTurnsPerRun: 30
+        toolsets: "file,web"
+        persistSession: true
+        worktreeMode: false
+        checkpoints: false
+        quiet: true
+    runtime:
+      heartbeat:
+        enabled: false
+        intervalSec: 0
+        cooldownSec: 30
+        wakeOnAssignment: false
+        wakeOnOnDemand: true
+        wakeOnAutomation: false
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: false
+      canCreateSkills: true
+    budgetMonthlyCents: 0
+    metadata:
+      sellhandTeam: "Knowledge and Enablement"
+      bootstrapActive: false
+      autonomyLevel: L1
+projects:
+  sellhand-control-plane-foundation:
+    status: planned
+    metadata:
+      goalSlug: governed-ai-execution
+      externalEffectsAllowed: false
+
+  sellhand-product-engineering:
+    status: planned
+    metadata:
+      goalSlug: reliable-direct-revenue-platform
+      externalEffectsAllowed: false
+    workspaces:
+      sellhand-github:
+        name: Sellhand Product Repository
+        sourceType: git
+        repoUrl: https://github.com/codehornets/sellhand.git
+        defaultRef: main
+        visibility: private
+        isPrimary: true
+
+  restaurant-acquisition-pipeline:
+    status: planned
+    metadata:
+      goalSlug: repeatable-acquisition-pipeline
+      externalEffectsAllowed: false
+
+  restaurant-audit-and-onboarding:
+    status: planned
+    metadata:
+      goalSlug: paying-pilots
+      externalEffectsAllowed: false
+
+  restaurant-growth-operations:
+    status: planned
+    metadata:
+      goalSlug: direct-revenue-improvement
+      externalEffectsAllowed: false
+
+  support-and-customer-success:
+    status: planned
+    metadata:
+      goalSlug: paying-pilots
+      externalEffectsAllowed: false
+
+  revenue-finance-and-analytics:
+    status: planned
+    metadata:
+      goalSlug: governed-ai-execution
+      externalEffectsAllowed: false
+
+  governance-and-knowledge:
+    status: planned
+    metadata:
+      goalSlug: governed-ai-execution
+      externalEffectsAllowed: false
+
+tasks:
+  sellhand-control-plane-foundation-starter:
+    status: backlog
+    priority: high
+    metadata:
+      goalSlug: governed-ai-execution
+      approvalRequired: false
+  sellhand-product-engineering-starter:
+    status: backlog
+    priority: high
+    metadata:
+      goalSlug: reliable-direct-revenue-platform
+      approvalRequired: false
+  restaurant-acquisition-pipeline-starter:
+    status: backlog
+    priority: high
+    metadata:
+      goalSlug: repeatable-acquisition-pipeline
+      approvalRequired: true
+  restaurant-audit-and-onboarding-starter:
+    status: backlog
+    priority: high
+    metadata:
+      goalSlug: paying-pilots
+      approvalRequired: false
+  restaurant-growth-operations-starter:
+    status: backlog
+    priority: high
+    metadata:
+      goalSlug: direct-revenue-improvement
+      approvalRequired: true
+  support-and-customer-success-starter:
+    status: backlog
+    priority: high
+    metadata:
+      goalSlug: paying-pilots
+      approvalRequired: false
+  revenue-finance-and-analytics-starter:
+    status: backlog
+    priority: high
+    metadata:
+      goalSlug: governed-ai-execution
+      approvalRequired: false
+  governance-and-knowledge-starter:
+    status: backlog
+    priority: high
+    metadata:
+      goalSlug: governed-ai-execution
+      approvalRequired: false
+routines:
+  daily-executive-triage:
+    status: paused
+    priority: medium
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        label: Bootstrap schedule (disabled)
+        enabled: false
+        cronExpression: "0 9 * * 1-5"
+        timezone: America/Montreal
+  daily-pipeline-review:
+    status: paused
+    priority: medium
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        label: Bootstrap schedule (disabled)
+        enabled: false
+        cronExpression: "30 9 * * 1-5"
+        timezone: America/Montreal
+  weekly-product-quality-review:
+    status: paused
+    priority: medium
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        label: Bootstrap schedule (disabled)
+        enabled: false
+        cronExpression: "0 10 * * 1"
+        timezone: America/Montreal
+  weekly-restaurant-health-review:
+    status: paused
+    priority: medium
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        label: Bootstrap schedule (disabled)
+        enabled: false
+        cronExpression: "0 10 * * 2"
+        timezone: America/Montreal
+  weekly-revenue-and-experiment-review:
+    status: paused
+    priority: medium
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        label: Bootstrap schedule (disabled)
+        enabled: false
+        cronExpression: "0 10 * * 3"
+        timezone: America/Montreal
+  weekly-agent-performance-review:
+    status: paused
+    priority: medium
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        label: Bootstrap schedule (disabled)
+        enabled: false
+        cronExpression: "0 10 * * 4"
+        timezone: America/Montreal
+  monthly-agent-cost-review:
+    status: paused
+    priority: medium
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        label: Bootstrap schedule (disabled)
+        enabled: false
+        cronExpression: "0 11 1 * *"
+        timezone: America/Montreal
+  monthly-strategy-review:
+    status: paused
+    priority: medium
+    concurrencyPolicy: skip_if_active
+    catchUpPolicy: skip_missed
+    triggers:
+      - kind: schedule
+        label: Bootstrap schedule (disabled)
+        enabled: false
+        cronExpression: "0 13 1 * *"
+        timezone: America/Montreal

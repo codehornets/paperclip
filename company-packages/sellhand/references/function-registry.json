@@ -1,0 +1,3439 @@
+{
+  "schema_version": "sellhand/functions/v1",
+  "timezone": "America/Montreal",
+  "currency": "CAD",
+  "functions": [
+    {
+      "function_id": "strategy-and-kpi-management",
+      "name": "Strategy and KPI management",
+      "business_outcome": "A measurable, inspectable strategy and kpi management decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Strategy and KPI management artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted strategy and kpi management artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "medium",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "company-coordination",
+      "name": "Company coordination",
+      "business_outcome": "A measurable, inspectable company coordination decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Company coordination artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted company coordination artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "project-and-task-orchestration",
+      "name": "Project and task orchestration",
+      "business_outcome": "A measurable, inspectable project and task orchestration decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Project and task orchestration artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted project and task orchestration artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "ai-workforce-management",
+      "name": "AI workforce management",
+      "business_outcome": "A measurable, inspectable ai workforce management decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "AI workforce management artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted ai workforce management artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "policy-evaluation",
+      "name": "Policy evaluation",
+      "business_outcome": "A measurable, inspectable policy evaluation decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Policy evaluation artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted policy evaluation artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "risk-classification",
+      "name": "Risk classification",
+      "business_outcome": "A measurable, inspectable risk classification decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Risk classification artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted risk classification artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "approval-management",
+      "name": "Approval management",
+      "business_outcome": "A measurable, inspectable approval management decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Approval management artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted approval management artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "budget-management",
+      "name": "Budget management",
+      "business_outcome": "A measurable, inspectable budget management decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Budget management artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted budget management artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "medium",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "agent-performance-review",
+      "name": "Agent performance review",
+      "business_outcome": "A measurable, inspectable agent performance review decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Executive and Governance",
+      "responsible_agent": "sellhand-ceo",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Agent performance review artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted agent performance review artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "product-discovery",
+      "name": "Product discovery",
+      "business_outcome": "A measurable, inspectable product discovery decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Product discovery artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted product discovery artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "feedback-synthesis",
+      "name": "Feedback synthesis",
+      "business_outcome": "A measurable, inspectable feedback synthesis decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Feedback synthesis artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted feedback synthesis artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "roadmap-prioritization",
+      "name": "Roadmap prioritization",
+      "business_outcome": "A measurable, inspectable roadmap prioritization decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Roadmap prioritization artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted roadmap prioritization artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "product-requirements",
+      "name": "Product requirements",
+      "business_outcome": "A measurable, inspectable product requirements decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Product requirements artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted product requirements artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "bootstrap"
+    },
+    {
+      "function_id": "software-engineering",
+      "name": "Software engineering",
+      "business_outcome": "A measurable, inspectable software engineering decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Software engineering artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted software engineering artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "bootstrap"
+    },
+    {
+      "function_id": "code-review",
+      "name": "Code review",
+      "business_outcome": "A measurable, inspectable code review decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Code review artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted code review artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "testing",
+      "name": "Testing",
+      "business_outcome": "A measurable, inspectable testing decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Testing artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted testing artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "bootstrap"
+    },
+    {
+      "function_id": "qa",
+      "name": "QA",
+      "business_outcome": "A measurable, inspectable qa decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "QA artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted qa artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "bootstrap"
+    },
+    {
+      "function_id": "release-readiness",
+      "name": "Release readiness",
+      "business_outcome": "A measurable, inspectable release readiness decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Release readiness artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted release readiness artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "devops",
+      "name": "DevOps",
+      "business_outcome": "A measurable, inspectable devops decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "DevOps artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted devops artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "reliability",
+      "name": "Reliability",
+      "business_outcome": "A measurable, inspectable reliability decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Reliability artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted reliability artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "medium",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "security",
+      "name": "Security",
+      "business_outcome": "A measurable, inspectable security decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Security artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted security artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "data-governance",
+      "name": "Data governance",
+      "business_outcome": "A measurable, inspectable data governance decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Data governance artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted data governance artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "incident-management",
+      "name": "Incident management",
+      "business_outcome": "A measurable, inspectable incident management decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Product and Engineering",
+      "responsible_agent": "product-engineering-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Incident management artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted incident management artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "medium",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "product-engineering-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "market-intelligence",
+      "name": "Market intelligence",
+      "business_outcome": "A measurable, inspectable market intelligence decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Market intelligence artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted market intelligence artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "competitor-intelligence",
+      "name": "Competitor intelligence",
+      "business_outcome": "A measurable, inspectable competitor intelligence decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Competitor intelligence artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted competitor intelligence artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "restaurant-lead-research",
+      "name": "Restaurant lead research",
+      "business_outcome": "A measurable, inspectable restaurant lead research decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Restaurant lead research artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted restaurant lead research artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "bootstrap"
+    },
+    {
+      "function_id": "lead-enrichment",
+      "name": "Lead enrichment",
+      "business_outcome": "A measurable, inspectable lead enrichment decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Lead enrichment artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted lead enrichment artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "prospect-qualification",
+      "name": "Prospect qualification",
+      "business_outcome": "A measurable, inspectable prospect qualification decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Prospect qualification artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted prospect qualification artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "bootstrap"
+    },
+    {
+      "function_id": "crm-management",
+      "name": "CRM management",
+      "business_outcome": "A measurable, inspectable crm management decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "CRM management artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted crm management artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "outreach-preparation",
+      "name": "Outreach preparation",
+      "business_outcome": "A measurable, inspectable outreach preparation decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Outreach preparation artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted outreach preparation artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "bootstrap"
+    },
+    {
+      "function_id": "follow-up-preparation",
+      "name": "Follow-up preparation",
+      "business_outcome": "A measurable, inspectable follow-up preparation decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Follow-up preparation artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted follow-up preparation artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "reply-classification",
+      "name": "Reply classification",
+      "business_outcome": "A measurable, inspectable reply classification decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Reply classification artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted reply classification artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "meeting-preparation",
+      "name": "Meeting preparation",
+      "business_outcome": "A measurable, inspectable meeting preparation decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Meeting preparation artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted meeting preparation artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "proposal-preparation",
+      "name": "Proposal preparation",
+      "business_outcome": "A measurable, inspectable proposal preparation decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Proposal preparation artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted proposal preparation artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "contract-administration",
+      "name": "Contract administration",
+      "business_outcome": "A measurable, inspectable contract administration decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Contract administration artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted contract administration artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "restaurant-digital-audits",
+      "name": "Restaurant digital audits",
+      "business_outcome": "A measurable, inspectable restaurant digital audits decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Restaurant Operations",
+      "responsible_agent": "restaurant-audit-onboarding-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Restaurant digital audits artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted restaurant digital audits artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "restaurant-audit-onboarding-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "bootstrap"
+    },
+    {
+      "function_id": "restaurant-onboarding",
+      "name": "Restaurant onboarding",
+      "business_outcome": "A measurable, inspectable restaurant onboarding decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Restaurant Operations",
+      "responsible_agent": "restaurant-audit-onboarding-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Restaurant onboarding artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted restaurant onboarding artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "restaurant-audit-onboarding-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "menu-data-onboarding",
+      "name": "Menu-data onboarding",
+      "business_outcome": "A measurable, inspectable menu-data onboarding decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Restaurant Operations",
+      "responsible_agent": "restaurant-audit-onboarding-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Menu-data onboarding artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted menu-data onboarding artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "menu-normalization",
+      "name": "Menu normalization",
+      "business_outcome": "A measurable, inspectable menu normalization decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Restaurant Operations",
+      "responsible_agent": "restaurant-audit-onboarding-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Menu normalization artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted menu normalization artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "integration-setup",
+      "name": "Integration setup",
+      "business_outcome": "A measurable, inspectable integration setup decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Restaurant Operations",
+      "responsible_agent": "restaurant-audit-onboarding-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Integration setup artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted integration setup artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "integration-monitoring",
+      "name": "Integration monitoring",
+      "business_outcome": "A measurable, inspectable integration monitoring decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Restaurant Operations",
+      "responsible_agent": "restaurant-audit-onboarding-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Integration monitoring artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted integration monitoring artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "restaurant-audit-onboarding-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "launch-readiness-review",
+      "name": "Launch-readiness review",
+      "business_outcome": "A measurable, inspectable launch-readiness review decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Restaurant Operations",
+      "responsible_agent": "restaurant-audit-onboarding-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Launch-readiness review artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted launch-readiness review artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "restaurant-audit-onboarding-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "owner-training",
+      "name": "Owner training",
+      "business_outcome": "A measurable, inspectable owner training decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Restaurant Operations",
+      "responsible_agent": "restaurant-audit-onboarding-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Owner training artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted owner training artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "content-strategy",
+      "name": "Content strategy",
+      "business_outcome": "A measurable, inspectable content strategy decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Content strategy artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted content strategy artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "medium",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "content-production",
+      "name": "Content production",
+      "business_outcome": "A measurable, inspectable content production decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Content production artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted content production artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "campaign-planning",
+      "name": "Campaign planning",
+      "business_outcome": "A measurable, inspectable campaign planning decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Campaign planning artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted campaign planning artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "campaign-monitoring",
+      "name": "Campaign monitoring",
+      "business_outcome": "A measurable, inspectable campaign monitoring decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Campaign monitoring artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted campaign monitoring artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "lifecycle-crm",
+      "name": "Lifecycle CRM",
+      "business_outcome": "A measurable, inspectable lifecycle crm decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Lifecycle CRM artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted lifecycle crm artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "loyalty-operations",
+      "name": "Loyalty operations",
+      "business_outcome": "A measurable, inspectable loyalty operations decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Loyalty operations artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted loyalty operations artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "local-seo",
+      "name": "Local SEO",
+      "business_outcome": "A measurable, inspectable local seo decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Local SEO artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted local seo artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "reputation-monitoring",
+      "name": "Reputation monitoring",
+      "business_outcome": "A measurable, inspectable reputation monitoring decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Reputation monitoring artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted reputation monitoring artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "experiment-recommendations",
+      "name": "Experiment recommendations",
+      "business_outcome": "A measurable, inspectable experiment recommendations decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Experiment recommendations artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted experiment recommendations artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "experiment-analysis",
+      "name": "Experiment analysis",
+      "business_outcome": "A measurable, inspectable experiment analysis decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Growth and Revenue",
+      "responsible_agent": "growth-revenue-lead",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Experiment analysis artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted experiment analysis artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "growth-revenue-lead",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "customer-support-triage",
+      "name": "Customer-support triage",
+      "business_outcome": "A measurable, inspectable customer-support triage decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Customer Success and Support",
+      "responsible_agent": "support-customer-success-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Customer-support triage artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted customer-support triage artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "support-customer-success-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "technical-support-diagnosis",
+      "name": "Technical-support diagnosis",
+      "business_outcome": "A measurable, inspectable technical-support diagnosis decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Customer Success and Support",
+      "responsible_agent": "support-customer-success-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Technical-support diagnosis artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted technical-support diagnosis artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "support-customer-success-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "customer-success-health-scoring",
+      "name": "Customer-success health scoring",
+      "business_outcome": "A measurable, inspectable customer-success health scoring decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Customer Success and Support",
+      "responsible_agent": "support-customer-success-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Customer-success health scoring artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted customer-success health scoring artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "support-customer-success-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "restaurant-performance-reviews",
+      "name": "Restaurant performance reviews",
+      "business_outcome": "A measurable, inspectable restaurant performance reviews decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Customer Success and Support",
+      "responsible_agent": "support-customer-success-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Restaurant performance reviews artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted restaurant performance reviews artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "support-customer-success-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "churn-detection",
+      "name": "Churn detection",
+      "business_outcome": "A measurable, inspectable churn detection decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Customer Success and Support",
+      "responsible_agent": "support-customer-success-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Churn detection artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted churn detection artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "support-customer-success-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "retention-playbooks",
+      "name": "Retention playbooks",
+      "business_outcome": "A measurable, inspectable retention playbooks decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Customer Success and Support",
+      "responsible_agent": "support-customer-success-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Retention playbooks artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted retention playbooks artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "support-customer-success-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "renewal-preparation",
+      "name": "Renewal preparation",
+      "business_outcome": "A measurable, inspectable renewal preparation decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Customer Success and Support",
+      "responsible_agent": "support-customer-success-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Renewal preparation artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted renewal preparation artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "support-customer-success-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "expansion-recommendations",
+      "name": "Expansion recommendations",
+      "business_outcome": "A measurable, inspectable expansion recommendations decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Customer Success and Support",
+      "responsible_agent": "support-customer-success-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Expansion recommendations artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted expansion recommendations artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "support-customer-success-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "revenue-reporting",
+      "name": "Revenue reporting",
+      "business_outcome": "A measurable, inspectable revenue reporting decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Revenue reporting artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted revenue reporting artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "medium",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "revenue-experiment-analyst",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "attribution-reporting",
+      "name": "Attribution reporting",
+      "business_outcome": "A measurable, inspectable attribution reporting decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Attribution reporting artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted attribution reporting artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "medium",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "revenue-experiment-analyst",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "billing-administration",
+      "name": "Billing administration",
+      "business_outcome": "A measurable, inspectable billing administration decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Billing administration artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted billing administration artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "payment-reconciliation",
+      "name": "Payment reconciliation",
+      "business_outcome": "A measurable, inspectable payment reconciliation decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Sellhand BusinessOS or fixture equivalent; Paperclip stores only work evidence.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Payment reconciliation artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted payment reconciliation artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L1",
+      "approval_requirement": "Human approval before any external, financial, live, or irreversible effect.",
+      "risk_level": "high",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "sellhand-ceo and board",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "accounts-receivable-monitoring",
+      "name": "Accounts-receivable monitoring",
+      "business_outcome": "A measurable, inspectable accounts-receivable monitoring decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Accounts-receivable monitoring artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted accounts-receivable monitoring artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "revenue-experiment-analyst",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "unit-economics-analysis",
+      "name": "Unit-economics analysis",
+      "business_outcome": "A measurable, inspectable unit-economics analysis decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Unit-economics analysis artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted unit-economics analysis artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "revenue-experiment-analyst",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "forecasting",
+      "name": "Forecasting",
+      "business_outcome": "A measurable, inspectable forecasting decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Forecasting artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted forecasting artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "revenue-experiment-analyst",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "agent-cost-reporting",
+      "name": "Agent-cost reporting",
+      "business_outcome": "A measurable, inspectable agent-cost reporting decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Agent-cost reporting artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted agent-cost reporting artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "revenue-experiment-analyst",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "restaurant-value-reporting",
+      "name": "Restaurant-value reporting",
+      "business_outcome": "A measurable, inspectable restaurant-value reporting decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Data and Finance",
+      "responsible_agent": "revenue-experiment-analyst",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Restaurant-value reporting artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted restaurant-value reporting artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "revenue-experiment-analyst",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "documentation",
+      "name": "Documentation",
+      "business_outcome": "A measurable, inspectable documentation decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Knowledge and Enablement",
+      "responsible_agent": "governance-knowledge-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Documentation artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted documentation artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "governance-knowledge-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "knowledge-management",
+      "name": "Knowledge management",
+      "business_outcome": "A measurable, inspectable knowledge management decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Knowledge and Enablement",
+      "responsible_agent": "governance-knowledge-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Knowledge management artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted knowledge management artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "governance-knowledge-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "meeting-summaries",
+      "name": "Meeting summaries",
+      "business_outcome": "A measurable, inspectable meeting summaries decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Knowledge and Enablement",
+      "responsible_agent": "governance-knowledge-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Meeting summaries artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted meeting summaries artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "governance-knowledge-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "decision-records",
+      "name": "Decision records",
+      "business_outcome": "A measurable, inspectable decision records decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Knowledge and Enablement",
+      "responsible_agent": "governance-knowledge-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Decision records artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted decision records artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "governance-knowledge-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "sop-maintenance",
+      "name": "SOP maintenance",
+      "business_outcome": "A measurable, inspectable sop maintenance decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Knowledge and Enablement",
+      "responsible_agent": "governance-knowledge-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "SOP maintenance artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted sop maintenance artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "governance-knowledge-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "training",
+      "name": "Training",
+      "business_outcome": "A measurable, inspectable training decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Knowledge and Enablement",
+      "responsible_agent": "governance-knowledge-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Training artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted training artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "governance-knowledge-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "vendor-tracking",
+      "name": "Vendor tracking",
+      "business_outcome": "A measurable, inspectable vendor tracking decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Knowledge and Enablement",
+      "responsible_agent": "governance-knowledge-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Vendor tracking artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted vendor tracking artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "governance-knowledge-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    },
+    {
+      "function_id": "administrative-coordination",
+      "name": "Administrative coordination",
+      "business_outcome": "A measurable, inspectable administrative coordination decision or artifact advances an approved Sellhand goal.",
+      "owning_team": "Knowledge and Enablement",
+      "responsible_agent": "governance-knowledge-agent",
+      "trigger": "Assigned Paperclip issue, approved routine issue, or board request.",
+      "inputs": [
+        "originating goal/project/issue",
+        "fixture or approved source references",
+        "policy context"
+      ],
+      "authoritative_source": "Paperclip work lineage plus referenced source artifacts.",
+      "allowed_tools": [
+        "Paperclip issue/document APIs",
+        "fixture runner",
+        "read-only approved research when explicitly assigned"
+      ],
+      "outputs": [
+        "Administrative coordination artifact",
+        "evidence manifest",
+        "recommended next action"
+      ],
+      "acceptance_criteria": "Output is issue-linked, source-labeled, bilingual where customer-facing, policy-classified, and independently inspectable.",
+      "kpi": "Accepted administrative coordination artifacts per cycle with zero unauthorized effects and recorded business KPI linkage.",
+      "autonomy_level": "L2",
+      "approval_requirement": "Human approval when the recommendation crosses an L3/L4 boundary.",
+      "risk_level": "low",
+      "failure_conditions": [
+        "missing tenant/source context",
+        "uncited material claim",
+        "unapproved external effect",
+        "acceptance criteria not met"
+      ],
+      "escalation_owner": "governance-knowledge-agent",
+      "audit_evidence": [
+        "origin issue",
+        "input references",
+        "artifact checksum/reference",
+        "policy/approval decision",
+        "test or review result"
+      ],
+      "implementation_phase": "future-disabled"
+    }
+  ]
+}

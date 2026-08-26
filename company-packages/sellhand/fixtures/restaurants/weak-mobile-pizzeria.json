@@ -1,0 +1,21 @@
+{
+  "fixture_id": "weak-mobile-pizzeria",
+  "restaurant_id": "restaurant-weak-mobile",
+  "organization_id": "sellhand-fixture-org",
+  "fictional": true,
+  "name": "Pizzeria Mobile Faible",
+  "traits": {
+    "direct_ordering": true,
+    "marketplace_share": 45,
+    "mobile_score": 20,
+    "hours_consistency": 75,
+    "review_response_rate": 50,
+    "digital_presence": 48
+  },
+  "expected": {
+    "fit": "high",
+    "pain": [
+      "weak_mobile_ordering"
+    ]
+  }
+}

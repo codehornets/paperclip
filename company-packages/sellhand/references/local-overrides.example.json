@@ -1,0 +1,8 @@
+{
+  "apiBaseUrl": "http://127.0.0.1:3210",
+  "sellhandWorkspace": "../sellhand",
+  "paperclipWorkspace": ".",
+  "expectedSellhandRemote": "https://github.com/codehornets/sellhand.git",
+  "allowDirtySellhandReadOnly": true,
+  "activeAgentCwdStrategy": "sellhand-worktree-for-builder"
+}

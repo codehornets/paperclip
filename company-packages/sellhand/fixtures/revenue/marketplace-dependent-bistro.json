@@ -1,0 +1,12 @@
+{
+  "fixture": true,
+  "organization_id": "sellhand-fixture-org",
+  "restaurant_id": "restaurant-marketplace-bistro",
+  "period": "2026-07",
+  "currency": "CAD",
+  "direct_revenue_cents": 1250000,
+  "marketplace_revenue_cents": 2100000,
+  "repeat_customer_rate": 0.24,
+  "average_order_value_cents": 3850,
+  "attribution_status": "synthetic"
+}
