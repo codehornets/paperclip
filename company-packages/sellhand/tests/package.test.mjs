@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { cpSync, existsSync, mkdtempSync, readFileSync, readdirSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
+import { spawnSync } from "node:child_process";
 import test from "node:test";
 
 const root = resolve(import.meta.dirname, "..");
@@ -38,6 +40,16 @@ const requiredTeams = [
   "knowledge-and-enablement",
 ];
 
+const snapshotFiles = (directory, relativePath = "") => Object.fromEntries(
+  readdirSync(join(directory, relativePath), { withFileTypes: true })
+    .flatMap((entry) => {
+      const path = join(relativePath, entry.name);
+      return entry.isDirectory()
+        ? Object.entries(snapshotFiles(directory, path))
+        : [[path, readFileSync(join(directory, path), "utf8")]];
+    }),
+);
+
 test("portable package contains every required artifact, agent, and skill", () => {
   for (const artifact of requiredArtifacts) assert.ok(existsSync(join(root, artifact)), artifact);
   for (const slug of requiredTeams) assert.ok(existsSync(join(root, "teams", slug, "TEAM.md")), slug);
@@ -71,8 +83,30 @@ test("every portable project maps to a declared company goal", () => {
   const goalSlugs = new Set(goals.map((goal) => goal.slug));
   assert.equal(Object.keys(mapping).length, 8);
   for (const [projectSlug, goalSlug] of Object.entries(mapping)) {
-    assert.ok(existsSync(join(root, "projects", projectSlug, "PROJECT.md")), projectSlug);
+    const projectPath = join(root, "projects", projectSlug, "PROJECT.md");
+    const taskPath = join(root, "projects", projectSlug, "tasks", `${projectSlug}-starter`, "TASK.md");
+    assert.ok(existsSync(projectPath), projectSlug);
+    assert.ok(existsSync(taskPath), `${projectSlug} starter task`);
     assert.ok(goalSlugs.has(goalSlug), `${projectSlug} -> ${goalSlug}`);
+    assert.ok(readFileSync(projectPath, "utf8").includes(`\`${goalSlug}\``), `${projectSlug} project goal`);
+    assert.ok(readFileSync(taskPath, "utf8").includes(`\`${goalSlug}\``), `${projectSlug} task goal`);
+  }
+});
+
+test("generated package artifacts are synchronized with the generator", () => {
+  const temporaryRoot = mkdtempSync(join(tmpdir(), "sellhand-package-generation-"));
+  const generatedRoot = join(temporaryRoot, "sellhand");
+  try {
+    cpSync(root, generatedRoot, { recursive: true });
+    const before = snapshotFiles(generatedRoot);
+    const result = spawnSync(process.execPath, [join(generatedRoot, "scripts", "generate-package.mjs")], {
+      cwd: generatedRoot,
+      encoding: "utf8",
+    });
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    assert.deepEqual(snapshotFiles(generatedRoot), before);
+  } finally {
+    rmSync(temporaryRoot, { recursive: true, force: true });
   }
 });
 

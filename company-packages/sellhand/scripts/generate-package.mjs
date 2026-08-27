@@ -170,7 +170,7 @@ Portable Agent Companies package for Sellhand. Canonical configuration contains 
 - \`make run\` — start or refresh the local Sellhand Paperclip instance.
 - \`make ensure\` — health-check the local read path and run the idempotent bootstrap recovery only when it is unavailable; scheduled read-only reviews should use this as their preflight.
 - \`make clear\` — stop Sellhand and remove generated logs/artifacts while preserving its database and configuration.
-- \`make reset\` — stop Sellhand, reset local database/runtime data while preserving configuration/secrets/repository mapping, then bootstrap again.
+- \`make reset\` — stop Sellhand, remove its local database/runtime data while preserving configuration/secrets/repository mapping, then bootstrap a fresh company.
 
 Machine-local state and overrides are written under ignored \`.paperclip-local/sellhand/\`. The existing Sellhand product repository is \`codehornets/sellhand\`; this bootstrap records its portable Git URL but does not edit or execute that repository.
 
@@ -454,13 +454,13 @@ json("schemas/business-command.schema.json", schema(["command_id", "proposal_id"
 json("schemas/business-outcome.schema.json", schema(["outcome_id", "command_id", "status", "result_reference", "metrics", "error", "audit_reference", "completed_at"], { outcome_id: { type: "string" }, command_id: { type: "string" }, status: { type: "string" }, result_reference: { type: "string" }, metrics: { type: "object" }, error: { type: ["string", "null"] }, audit_reference: { type: "string" }, completed_at: { type: "string" } }));
 
 const teamBlueprints = [
-  ["executive-and-governance", "Executive and Governance", "sellhand-ceo", ["sellhand-ceo"], "Owns strategy, KPI coordination, policy, risk, approvals, budgets, and agent performance."],
-  ["product-and-engineering", "Product and Engineering", "product-engineering-lead", ["product-engineering-lead", "product-builder", "qa-reliability-reviewer"], "Owns product discovery, requirements, implementation, independent QA, reliability, security, and release readiness."],
-  ["growth-and-revenue", "Growth and Revenue", "growth-revenue-lead", ["growth-revenue-lead", "restaurant-intelligence-agent", "sales-outreach-operator", "content-campaign-operator"], "Owns market intelligence, acquisition, qualification, draft outreach, content, campaigns, and growth experiments."],
-  ["restaurant-operations", "Restaurant Operations", "restaurant-audit-onboarding-agent", ["restaurant-audit-onboarding-agent", "menu-integration-operator"], "Owns restaurant audits, onboarding, menu normalization, integration readiness, launch review, and owner-training drafts."],
-  ["customer-success-and-support", "Customer Success and Support", "support-customer-success-agent", ["support-customer-success-agent"], "Owns support triage, diagnosis, health scoring, churn detection, retention, renewal, and expansion proposals."],
-  ["data-and-finance", "Data and Finance", "revenue-experiment-analyst", ["revenue-experiment-analyst", "billing-finance-operations-agent"], "Owns revenue, attribution, billing administration, reconciliation, unit economics, forecasting, agent cost, and restaurant value artifacts."],
-  ["knowledge-and-enablement", "Knowledge and Enablement", "governance-knowledge-agent", ["governance-knowledge-agent"], "Owns documentation, knowledge, meeting summaries, decision records, SOPs, training, vendor tracking, and administration."],
+  ["executive-and-governance", "Executive and Governance", "sellhand-ceo", ["sellhand-ceo"], "Owns strategy, KPI coordination, policy, risk, approvals, budgets, and agent performance. Paperclip's strict reporting tree is authoritative; this file is the portable team blueprint."],
+  ["product-and-engineering", "Product and Engineering", "product-engineering-lead", ["product-engineering-lead", "product-builder", "qa-reliability-reviewer"], "Owns product discovery, requirements, implementation, independent QA, reliability, security, and release readiness. Builder and reviewer remain separate roles."],
+  ["growth-and-revenue", "Growth and Revenue", "growth-revenue-lead", ["growth-revenue-lead", "restaurant-intelligence-agent", "sales-outreach-operator", "content-campaign-operator"], "Owns market intelligence, acquisition, qualification, draft outreach, content, campaigns, and growth experiments. All external effects remain human-approved."],
+  ["restaurant-operations", "Restaurant Operations", "restaurant-audit-onboarding-agent", ["restaurant-audit-onboarding-agent", "menu-integration-operator"], "Owns restaurant audits, onboarding, menu normalization, integration readiness, launch review, and owner-training drafts. Live menus and integrations are not modified during bootstrap."],
+  ["customer-success-and-support", "Customer Success and Support", "support-customer-success-agent", ["support-customer-success-agent"], "Owns support triage, diagnosis, health scoring, performance reviews, churn detection, retention, renewal, and expansion proposals."],
+  ["data-and-finance", "Data and Finance", "revenue-experiment-analyst", ["revenue-experiment-analyst", "billing-finance-operations-agent"], "Owns revenue and attribution reporting, billing administration, reconciliation, AR monitoring, unit economics, forecasting, agent costs, and restaurant value. No money movement is authorized."],
+  ["knowledge-and-enablement", "Knowledge and Enablement", "governance-knowledge-agent", ["governance-knowledge-agent"], "Owns documentation, knowledge, meeting summaries, decision records, SOPs, training, vendor tracking, and administrative coordination."],
 ];
 for (const [slug, name, manager, members, description] of teamBlueprints) {
   write(`teams/${slug}/TEAM.md`, `---
@@ -473,7 +473,7 @@ includes:
 ${members.map((member) => `  - ../../agents/${member}/AGENTS.md`).join("\n")}
 ---
 
-${description} Paperclip's strict reporting tree is authoritative; this file is the portable team blueprint.`);
+${description}`);
 }
 write("teams/README.md", `# Sellhand Teams
 
@@ -488,7 +488,7 @@ write("teams/README.md", `# Sellhand Teams
 Paperclip V1 uses a strict agent reporting tree; team names are role metadata rather than separate authoritative business databases.`);
 write("tasks/README.md", `# Portable Starter Tasks
 
-Canonical starter tasks live under \`projects/<project-slug>/tasks/<task-slug>/TASK.md\` so Paperclip imports project linkage by convention. This directory is the package-level task index and intentionally contains no duplicate task definitions.`);
+Canonical starter tasks live under \`projects/<project-slug>/tasks/<task-slug>/TASK.md\` so Paperclip imports project linkage by convention. This directory exists as the package-level task index and intentionally contains no duplicate task definitions.`);
 write("OPERATIONS_RUNBOOK.md", `# Sellhand Local Operations Runbook
 
 ## Start/bootstrap
@@ -499,9 +499,9 @@ In a linked Paperclip Git worktree, bootstrap creates the ignored \`.paperclip/.
 
 Fresh current-version instances may need to apply hundreds of migrations and build the plugin SDK before health becomes available. Bootstrap waits up to 900 seconds by default; set \`SELLHAND_PAPERCLIP_STARTUP_TIMEOUT_SECONDS\` to a positive integer when a slower machine needs a larger bound.
 
-Convenience targets from the repository root: \`make install\`, \`make setup\`, \`make run\`, \`make ensure\`, \`make clear\`, and \`make reset\`. \`make ensure\` is the idempotent preflight for scheduled read-only reviews: it exits immediately when health is available and otherwise uses the supported bootstrap recovery. Clear preserves the database/configuration and removes only owned logs/artifacts. Reset preserves configuration, secret keys, and repository mapping while recreating database/runtime data and re-running bootstrap.
+Convenience targets from the repository root: \`make install\`, \`make setup\`, \`make run\`, \`make ensure\`, \`make clear\`, and \`make reset\`. \`make ensure\` is the idempotent preflight for scheduled read-only reviews: it exits immediately when health is available and otherwise uses the supported bootstrap recovery. \`clear\` preserves the local database/configuration and removes only owned logs/artifacts. \`reset\` preserves configuration, secret keys, and the local Sellhand repository override while recreating database/runtime data and re-running bootstrap.
 
-The machine-local repository mapping lives at \`.paperclip-local/sellhand/local-overrides.json\` (ignored by Git). It points product engineering agents at the sibling Sellhand checkout after verifying its Git root and expected \`codehornets/sellhand\` origin. The builder uses Hermes worktree mode so the user's main checkout is not edited directly.
+The machine-local repository mapping lives at \`.paperclip-local/sellhand/local-overrides.json\` (ignored by Git). On this workstation it points to the sibling \`../sellhand\` checkout and verifies the origin is \`https://github.com/codehornets/sellhand.git\`. Paperclip configures \`product-engineering-lead\`, \`product-builder\`, and \`qa-reliability-reviewer\` with that repository as their Hermes \`cwd\`; the builder additionally uses Hermes worktree mode so it does not edit the user's dirty main checkout directly.
 
 ## Verify
 
