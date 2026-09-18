@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "command_id",
+    "proposal_id",
+    "organization_id",
+    "restaurant_id",
+    "command_type",
+    "idempotency_key",
+    "authorized_actor",
+    "approval_reference",
+    "policy_decision",
+    "issued_at"
+  ],
+  "properties": {
+    "command_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "organization_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "restaurant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "command_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorized_actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval_reference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "policy_decision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "issued_at": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

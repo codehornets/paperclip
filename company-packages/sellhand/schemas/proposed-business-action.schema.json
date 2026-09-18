@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "proposal_id",
+    "request_id",
+    "action_type",
+    "target",
+    "payload_reference",
+    "expected_outcome",
+    "estimated_cost",
+    "risk_level",
+    "required_approval",
+    "supporting_evidence",
+    "expires_at"
+  ],
+  "properties": {
+    "proposal_id": {
+      "type": "string"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "action_type": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    },
+    "payload_reference": {
+      "type": "string"
+    },
+    "expected_outcome": {
+      "type": "string"
+    },
+    "estimated_cost": {
+      "type": "number",
+      "minimum": 0
+    },
+    "risk_level": {
+      "type": "string"
+    },
+    "required_approval": {
+      "type": "boolean"
+    },
+    "supporting_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "expires_at": {
+      "type": "string"
+    }
+  }
+}

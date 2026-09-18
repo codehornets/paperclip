@@ -1,0 +1,10 @@
+{
+  "fixture": true,
+  "case_id": "support-fixture-1",
+  "organization_id": "sellhand-fixture-org",
+  "restaurant_id": "restaurant-marketplace-bistro",
+  "severity": "medium",
+  "category": "order_delay",
+  "contains_pii": false,
+  "expected_route": "technical-support-diagnosis"
+}

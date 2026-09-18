@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "outcome_id",
+    "command_id",
+    "status",
+    "result_reference",
+    "metrics",
+    "error",
+    "audit_reference",
+    "completed_at"
+  ],
+  "properties": {
+    "outcome_id": {
+      "type": "string"
+    },
+    "command_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "result_reference": {
+      "type": "string"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "audit_reference": {
+      "type": "string"
+    },
+    "completed_at": {
+      "type": "string"
+    }
+  }
+}
