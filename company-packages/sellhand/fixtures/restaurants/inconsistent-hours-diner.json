@@ -1,0 +1,21 @@
+{
+  "fixture_id": "inconsistent-hours-diner",
+  "restaurant_id": "restaurant-hours-gap",
+  "organization_id": "sellhand-fixture-org",
+  "fictional": true,
+  "name": "Dîner Horaires Variables",
+  "traits": {
+    "direct_ordering": true,
+    "marketplace_share": 40,
+    "mobile_score": 65,
+    "hours_consistency": 25,
+    "review_response_rate": 55,
+    "digital_presence": 58
+  },
+  "expected": {
+    "fit": "medium",
+    "pain": [
+      "inconsistent_hours"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "fixture_id": "marketplace-dependent-bistro",
+  "restaurant_id": "restaurant-marketplace-bistro",
+  "organization_id": "sellhand-fixture-org",
+  "fictional": true,
+  "name": "Bistro du Marché Fixture",
+  "traits": {
+    "direct_ordering": true,
+    "marketplace_share": 85,
+    "mobile_score": 52,
+    "hours_consistency": 70,
+    "review_response_rate": 35,
+    "digital_presence": 62
+  },
+  "expected": {
+    "fit": "high",
+    "pain": [
+      "marketplace_dependency",
+      "review_response_gap"
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "goals": [
+    {
+      "slug": "validate-ten-restaurants",
+      "title": "Validate Sellhand with 10 Greater Montréal restaurants",
+      "description": "Ten synthetic/public-source profiles reviewed; later ten consented validations.",
+      "level": "company",
+      "status": "active"
+    },
+    {
+      "slug": "paying-pilots",
+      "title": "Convert 3 restaurants into paying pilots",
+      "description": "Three board-approved signed pilots; bootstrap produces drafts only.",
+      "level": "company",
+      "status": "active"
+    },
+    {
+      "slug": "reliable-direct-revenue-platform",
+      "title": "Deliver a reliable restaurant direct-revenue platform",
+      "description": "Tenant-safe tests and release evidence meet the approved SLO gate.",
+      "level": "company",
+      "status": "active"
+    },
+    {
+      "slug": "repeatable-acquisition-pipeline",
+      "title": "Establish a repeatable restaurant acquisition pipeline",
+      "description": "Documented measurable pipeline stages with approval-gated outreach.",
+      "level": "company",
+      "status": "active"
+    },
+    {
+      "slug": "direct-revenue-improvement",
+      "title": "Demonstrate measurable direct-revenue improvement",
+      "description": "Attribution-qualified profitable uplift against a recorded baseline.",
+      "level": "company",
+      "status": "active"
+    },
+    {
+      "slug": "governed-ai-execution",
+      "title": "Operate Sellhand with governed AI execution and visible unit economics",
+      "description": "All high-impact effects approved and agent cost reported by work lineage.",
+      "level": "company",
+      "status": "active"
+    }
+  ]
+}

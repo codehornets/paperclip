@@ -1,0 +1,18 @@
+# Prepared only; do not activate during bootstrap.
+centralControlPlane:
+  url: https://paperclip.example.invalid
+  adapterType: hermes_gateway
+gateways:
+  product:
+    apiBaseUrl: https://product-hermes.example.invalid/api
+    sessionKeyStrategy: issue
+  growth:
+    apiBaseUrl: https://growth-hermes.example.invalid/api
+    sessionKeyStrategy: issue
+  restaurantOperations:
+    apiBaseUrl: https://restaurant-ops-hermes.example.invalid/api
+    sessionKeyStrategy: issue
+secrets:
+  apiKeyReference: HERMES_GATEWAY_API_KEY
+transport:
+  requireHttps: true

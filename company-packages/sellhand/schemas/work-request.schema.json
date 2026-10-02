@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "request_id",
+    "paperclip_company_id",
+    "paperclip_issue_id",
+    "sellhand_organization_id",
+    "restaurant_id",
+    "goal_id",
+    "requested_action",
+    "risk_level",
+    "autonomy_level",
+    "input_refs",
+    "requested_by",
+    "created_at",
+    "idempotency_key"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "paperclip_company_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "paperclip_issue_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sellhand_organization_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "restaurant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "goal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "risk_level": {
+      "type": "string",
+      "minLength": 1
+    },
+    "autonomy_level": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_by": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

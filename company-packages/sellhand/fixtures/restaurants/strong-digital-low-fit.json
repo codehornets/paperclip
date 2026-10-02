@@ -1,0 +1,19 @@
+{
+  "fixture_id": "strong-digital-low-fit",
+  "restaurant_id": "restaurant-low-fit",
+  "organization_id": "sellhand-fixture-org",
+  "fictional": true,
+  "name": "Maison Numérique Forte",
+  "traits": {
+    "direct_ordering": true,
+    "marketplace_share": 10,
+    "mobile_score": 95,
+    "hours_consistency": 95,
+    "review_response_rate": 95,
+    "digital_presence": 96
+  },
+  "expected": {
+    "fit": "low",
+    "pain": []
+  }
+}
