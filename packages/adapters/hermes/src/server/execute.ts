@@ -444,7 +444,8 @@ export async function execute(
   const args: string[] = ["chat", "-q", prompt];
   if (useQuiet) args.push("-Q");
 
-  if (model) {
+  // Hermes interprets -m auto literally; omitting it preserves tenant config.
+  if (model && model !== "auto") {
     args.push("-m", model);
   }
 
@@ -470,12 +471,8 @@ export async function execute(
   // Requires hermes-agent >= PR #3255 (feat/session-source-tag).
   args.push("--source", "tool");
 
-  // Bypass Hermes dangerous-command approval prompts.
-  // Paperclip agents run as non-interactive subprocesses with no TTY,
-  // so approval prompts would always timeout and deny legitimate commands
-  // (curl, python3 -c, etc.). Agents operate in a sandbox — the approval
-  // system is designed for human-attended interactive sessions.
-  args.push("--yolo");
+  // Outreach360 integration: retain Hermes' dangerous-command approval behavior.
+  // Tenant process isolation does not authorize bypassing those approvals.
 
   if (persistSession && prevSessionId) {
     args.push("--resume", prevSessionId);
