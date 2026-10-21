@@ -3,6 +3,7 @@ import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { ApiError } from "@/api/client";
 import { AssistantConnection, AssistantConnectionCard } from "./AssistantConnection";
 const mocks = vi.hoisted(() => ({ setup: vi.fn(), connections: vi.fn(), revoke: vi.fn(), breadcrumbs: vi.fn(), copy: vi.fn() }));
 vi.mock("@/hooks/usePrefersReducedMotion", () => ({ usePrefersReducedMotion: () => true }));
@@ -50,6 +51,16 @@ describe("assistant setup from Connections", () => {
     await flush();
     expect(container.querySelector('[aria-label="Manage Assistant Connection (MCP)"]')).not.toBeNull();
     expect(container.querySelector('[role="alert"]')).toBeNull();
+  });
+  it.each([
+    [401, "Sign in to connect an assistant"],
+    [404, "public HTTPS URL"],
+  ])("explains an instance that cannot offer assistant connections (%i) instead of offering a retry", async (status, message) => {
+    mocks.connections.mockRejectedValue(new ApiError("unavailable", status, null));
+    await render(<AssistantConnectionCard onNavigate={vi.fn()} />);
+    expect(container.textContent).toContain(message);
+    expect(container.querySelector('[role="alert"]')).toBeNull();
+    expect(Array.from(container.querySelectorAll("button")).some(b => b.textContent === "Try again")).toBe(false);
   });
   it("uses the canonical URL and explains how OpenCode opens consent without granting access", async () => {
     await render();

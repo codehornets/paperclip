@@ -34,7 +34,10 @@ export function useAssistantConnections(poll = false) {
     queryKey: connectionsKey, queryFn: publicMcpApi.connections, retry: false,
     enabled: Boolean(selectedCompanyId), refetchInterval: poll ? 5000 : false,
   });
-  return { ...query, rows: (query.data ?? []).filter(row => row.companyId === selectedCompanyId && !row.revokedAt && !row.scopes.includes("paperclip:agent")) };
+  // 401/404 mean this instance can't offer assistant connections (no signed-in
+  // user or no public URL), which retrying won't change.
+  const unavailable = query.error instanceof ApiError && (query.error.status === 401 || query.error.status === 404);
+  return { ...query, unavailable, rows: (query.data ?? []).filter(row => row.companyId === selectedCompanyId && !row.revokedAt && !row.scopes.includes("paperclip:agent")) };
 }
 
 /** Inbound assistant access belongs beside the existing outbound connectors. */
@@ -52,7 +55,8 @@ export function AssistantConnectionCard({ onNavigate }: { onNavigate: (href: str
       <Button type="button" size="sm" variant="outline" onClick={() => onNavigate(ASSISTANT_CONNECTION_PATH)} aria-label={`${action} Assistant Connection (MCP)`}>{action}</Button>
     </div>
     {connections.isPending && <p className="border-t border-border px-4 py-3 text-xs text-muted-foreground">Checking your connection status…</p>}
-    {connections.isError && <div role="alert" className="flex flex-wrap items-center justify-between gap-3 border-t border-border px-4 py-3">
+    {connections.unavailable && <p className="border-t border-border px-4 py-3 text-xs text-muted-foreground">{setupError(connections.error!)}</p>}
+    {connections.isError && !connections.unavailable && <div role="alert" className="flex flex-wrap items-center justify-between gap-3 border-t border-border px-4 py-3">
       <p className="text-xs text-destructive">Couldn’t load your connection status.</p>
       <Button size="sm" variant="ghost" disabled={connections.isFetching} onClick={() => void connections.refetch()}>Try again</Button>
     </div>}

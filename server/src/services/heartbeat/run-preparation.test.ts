@@ -12,6 +12,7 @@ import {
   buildPaperclipRuntimeMcpServers,
   buildPaperclipWakePayload,
   ConfigurationIncompleteFailure,
+  createAdapterRuntimeToolAccess,
   createHeartbeatRunPreparation,
   resolveExecutionRunAdapterConfig,
 } from "./run-preparation.js";
@@ -137,5 +138,18 @@ describe("heartbeat run preparation module", () => {
     })).rejects.toBeInstanceOf(LegacyConfigurationIncompleteFailure);
     expect(secretsSvc.resolveAdapterConfigForRuntime).not.toHaveBeenCalled();
     expect(secretsSvc.resolveEnvBindings).not.toHaveBeenCalled();
+  });
+
+  it("offers runtime connection tools only to task-bound runs", () => {
+    vi.stubEnv("PAPERCLIP_AGENT_JWT_SECRET", "test-secret");
+    vi.stubEnv("PAPERCLIP_API_URL", "http://localhost:3100/api");
+    try {
+      const base = { agentId: "agent", companyId: "company", runId: "run", responsibleUserId: "user" };
+      expect(createAdapterRuntimeToolAccess({ ...base, issueId: null })).toBeUndefined();
+      expect(createAdapterRuntimeToolAccess({ ...base, issueId: "issue" })?.mcpEndpoint)
+        .toBe("http://localhost:3100/mcp/runtime-tools");
+    } finally {
+      vi.unstubAllEnvs();
+    }
   });
 });

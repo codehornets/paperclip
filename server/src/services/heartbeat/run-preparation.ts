@@ -1267,8 +1267,12 @@ export function createAdapterRuntimeToolAccess(input: {
   companyId: string;
   runId: string;
   responsibleUserId: string | null;
+  issueId: string | null;
 }): AdapterRuntimeToolAccess | undefined {
   if (!input.responsibleUserId) return undefined;
+  // Connection requests are filed against the run's task, and the endpoint
+  // rejects every call (including MCP initialize) from a run without one.
+  if (!input.issueId) return undefined;
   const minted = createRuntimeToolsToken({
     agentId: input.agentId,
     companyId: input.companyId,

@@ -758,8 +758,9 @@ export async function executeHeartbeatRuntime(db: Db, input: HeartbeatRuntimeExe
         companyId: agent.companyId,
         runId: run.id,
         responsibleUserId: run.responsibleUserId,
+        issueId: issueRef?.id ?? null,
       });
-      if (!runtimeTools) {
+      if (!runtimeTools && issueRef) {
         logger.warn(
           {
             companyId: agent.companyId,

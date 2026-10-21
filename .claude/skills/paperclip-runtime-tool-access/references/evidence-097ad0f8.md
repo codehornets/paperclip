@@ -1,0 +1,3 @@
+Edit new_string in run-preparation.ts: "  issueId: string | null;\n}): AdapterRuntimeToolAccess | undefined {\n  if (!input.responsibleUserId) return undefined;\n  // Connection requests are filed against the run's task, and the endpoint\n  // rejects every call (including MCP initialize) from a run without one.\n  if (!input.issueId) return undefined;"
+
+Edit new_string in runtime-execution.ts: "        responsibleUserId: run.responsibleUserId,\n        issueId: issueRef?.id ?? null,\n      });\n      if (!runtimeTools && issueRef) {"

@@ -87,9 +87,9 @@ vi.mock("./installation-integrity.js", () => ({ verifyNativeAcpxInstallation: vi
 
 describe("Copilot build-owned installation", () => {
   it("admits the current profile with environment launch preparation", () => {
-    expect(QUALIFIED_ACPX_PROFILES.copilot.agentProfileVersion).toBe(58);
+    expect(QUALIFIED_ACPX_PROFILES.copilot.agentProfileVersion).toBe(59);
     expect(QUALIFIED_ACPX_PROFILES.copilot.qualificationStatus).toBeUndefined();
-    expect(QUALIFIED_ACPX_PROFILES.copilot.commandDigest).toBe("sha256:d490dacdab02051d24c84aae49ac6fb12b8226cf8a47b014ec53f3d3a8410a94");
+    expect(QUALIFIED_ACPX_PROFILES.copilot.commandDigest).toBe("sha256:7aa427a49ef31156a45f24f59ebcf63019aa9dda709a041fe3c3c226569333d4");
   });
 
   it("preserves v57 while binding the shared Pi setup and launch repairs in v58", () => {
