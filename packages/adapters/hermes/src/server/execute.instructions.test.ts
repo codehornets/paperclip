@@ -158,6 +158,21 @@ console.log("Fixture completed\\nsession_id: ${SESSION_ID}");
     expect(invocation.systemPrompt).toContain(INSTRUCTIONS);
   });
 
+  it("keeps host guidance without Paperclip overlays when Paperclip context is disabled", async () => {
+    const ctx = context();
+    await execute({ ...ctx, config: {
+      ...ctx.config,
+      paperclipContext: false,
+      promptTemplate: "Standalone host prompt for {{runId}}.",
+      env: { CAPTURE_PATH: capturePath, HERMES_EPHEMERAL_SYSTEM_PROMPT: "User configured system guidance." },
+    } });
+    const [invocation] = await invocations();
+    expect(query(invocation)).toBe("Standalone host prompt for run-fresh.");
+    expect(invocation.systemPrompt).toContain("User configured system guidance.");
+    expect(invocation.systemPrompt).toContain(INSTRUCTIONS);
+    expect(invocation.systemPrompt).not.toContain("Paperclip API guidance:");
+  });
+
   it.each([false, true])("keeps an empty wake runnable with current identity (conversation=%s)", async (conversationMode) => {
     await execute(context({ context: { conversationMode } }));
     const [invocation] = await invocations();

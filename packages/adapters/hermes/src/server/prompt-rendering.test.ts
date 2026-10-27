@@ -276,6 +276,22 @@ test("preserves custom prompt templates while exposing runtime and wake variable
   expect(prompt).toContain("Paperclip runtime identity:");
 });
 
+test("renders only the custom prompt for recovery wakes when Paperclip context is disabled", () => {
+  const prompt = buildPrompt(baseContext({
+    paperclipWake: {
+      reason: "source_scoped_recovery_action",
+      recovery: true,
+    },
+  }), {
+    paperclipContext: false,
+    promptTemplate: "Custom standalone prompt for {{agent.name}} on run {{run.id}}.",
+  });
+
+  expect(prompt).toBe("Custom standalone prompt for Hermes Engineer on run run-1.");
+  expect(prompt).not.toContain("Paperclip runtime identity:");
+  expect(prompt).not.toContain("## Paperclip Wake Payload");
+});
+
 test("keeps historical task markdown available to custom templates while automatic context uses assignment markdown", () => {
   const historical = "Historical task with current comment.";
   const assignment = "Assignment task without current comment.";

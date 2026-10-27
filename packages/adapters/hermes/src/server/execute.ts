@@ -209,6 +209,10 @@ export function buildPrompt(
     paperclipRunIdEnv: "PAPERCLIP_RUN_ID",
   };
 
+  if (cfgBoolean(config.paperclipContext) === false) {
+    return template ? renderTemplate(renderConditionalSections(template, vars), vars) : "";
+  }
+
   const rendered = template && !isPaperclipRecoveryWakePayload(context.paperclipWake)
     ? renderTemplate(renderConditionalSections(template, vars), vars)
     : "";
@@ -507,9 +511,11 @@ export async function execute(
   env.HERMES_EPHEMERAL_SYSTEM_PROMPT = joinPromptSections([
     env.HERMES_EPHEMERAL_SYSTEM_PROMPT,
     agentInstructions,
-    renderTemplate(HERMES_SYSTEM_PROMPT_TEMPLATE, {
-      agent: ctx.agent,
-    }),
+    cfgBoolean(config.paperclipContext) === false
+      ? ""
+      : renderTemplate(HERMES_SYSTEM_PROMPT_TEMPLATE, {
+        agent: ctx.agent,
+      }),
   ]);
 
   if (ctx.runId) env.PAPERCLIP_RUN_ID = ctx.runId;
